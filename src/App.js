@@ -4,7 +4,7 @@ import ToDo from './components/ToDo.js';
 
 class App extends Component {
   constructor(props) {
-    super (prop);
+    super (props);
   this.state = {
     todos:[
       { description: 'Buy Birthday gift', isCompleted:true },
@@ -22,7 +22,7 @@ class App extends Component {
    e.preventDefault();
    if (!this.state.newTodoDescription) { return }
    const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
-    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });   
+    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
  }
 
 
@@ -46,6 +46,7 @@ class App extends Component {
            <input type="submit" />
          </form>
       </div>
+
     );
   }
 }
