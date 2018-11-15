@@ -49,6 +49,7 @@ deleteTodo() {
        <form onSubmit={ (e) => this.handleSubmit(e) }>
             <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } />
            <input type="submit" />
+           <button onClick = {this.deleteTodo}>{this.props.deleteTodo}Delete</button>
          </form>
       </div>
 
