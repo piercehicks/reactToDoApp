@@ -33,6 +33,11 @@ class App extends Component {
     this.setState({ todos: todos });
 }
 
+deleteTodo() {
+  console.log("activate delete");
+
+}
+
   render() {
     return (
       <div className="App">
@@ -46,6 +51,7 @@ class App extends Component {
            <input type="submit" />
          </form>
       </div>
+
 
     );
   }
