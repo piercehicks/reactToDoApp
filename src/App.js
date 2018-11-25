@@ -34,9 +34,9 @@ class App extends Component {
 }
 
 deleteTodo(index) {
-const copyOfTodos = this.state.todos;
-const removedTodo = copyOfTodos.splice(index,1);
-this.setState({copyOfTodos: copyOfTodos})
+  const copyOfTodos = this.state.todos;
+  const removedTodo = copyOfTodos.splice(index,1);
+  this.setState({removedTodo: removedTodo})
 }
 
   render() {
