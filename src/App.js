@@ -7,7 +7,7 @@ class App extends Component {
     super (props);
   this.state = {
     todos:[
-      { description: 'Buy Birthday gift', isCompleted:true },
+      { description: 'Buy Birthday gift', isCompleted: true },
       { description: 'Take out trash', isCompleted: false },
       { description: "Meet up with Eddy", isCompleted: false }
     ],
@@ -34,9 +34,11 @@ class App extends Component {
 }
 
 deleteTodo(index) {
-  const copyOfTodos = this.state.todos;
-  const removedTodo = copyOfTodos.splice(index,1);
-  this.setState({removedTodo: removedTodo})
+  const todos = this.state.todos;
+  const todoIndex = index;
+  const filteredTodos = todos.filter(todos =>
+    todos !== todoIndex);
+  this.setState({todos: filteredTodos});
 }
 
   render() {
